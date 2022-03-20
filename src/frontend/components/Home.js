@@ -75,8 +75,8 @@ const Home = ({ marketplace, nft }) => {
           </Row>
         </div>
         : (
-          <main style={{ padding: "1rem 0"}}>
-            <h2>No listed assets</h2>
+          <main style={{ padding: "5rem 0"}}>
+            <h4>Marketplace has no offers at the moment. Please add yours or check back later.</h4>
           </main>
         )}
     </div>

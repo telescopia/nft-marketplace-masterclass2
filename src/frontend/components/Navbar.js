@@ -2,23 +2,23 @@ import {
     Link
 } from "react-router-dom";
 import { Navbar, Nav, Button, Container } from 'react-bootstrap'
-import market from './market.png'
+import market from './nft_gallery_logo.png'
 
 const Navigation = ({ web3Handler, account }) => {
     return (
-        <Navbar expand="lg" bg="secondary" variant="dark">
+        <Navbar expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="http://www.dappuniversity.com/bootcamp">
-                    <img src={market} width="40" height="40" className="" alt="" />
-                    &nbsp; DApp NFT Marketplace
+                <Navbar.Brand href="https://ethereum.org/">
+                    <img src={market} height="40" className="" alt="" />
+                    &nbsp; <span className="text-light">NFT Gallery Market</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/create">Create</Nav.Link>
-                        <Nav.Link as={Link} to="/my-listed-items">My Listed Items</Nav.Link>
-                        <Nav.Link as={Link} to="/my-purchases">My Purchases</Nav.Link>
+                        <Nav.Link as={Link} to="/">Catalog</Nav.Link>
+                        <Nav.Link as={Link} to="/create">Sell</Nav.Link>
+                        <Nav.Link as={Link} to="/my-listed-items">My Sales</Nav.Link>
+                        <Nav.Link as={Link} to="/my-purchases">My Assets</Nav.Link>
                     </Nav>
                     <Nav>
                         {account ? (
@@ -33,7 +33,7 @@ const Navigation = ({ web3Handler, account }) => {
 
                             </Nav.Link>
                         ) : (
-                            <Button onClick={web3Handler} variant="outline-light">Connect Wallet</Button>
+                            <Button onClick={web3Handler} variant="outline-light">Connect</Button>
                         )}
                     </Nav>
                 </Navbar.Collapse>

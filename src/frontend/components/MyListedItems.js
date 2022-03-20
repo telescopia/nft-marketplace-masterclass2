@@ -5,14 +5,14 @@ import { Row, Col, Card } from 'react-bootstrap'
 function renderSoldItems(items) {
   return(
     <>
-      <h2>Sold</h2>
+      <h2>My Sales</h2>
       <Row xs={1} md={2} lg={4} className="g-4 py-3">
         {items.map((item, idx) => (
           <Col key={idx} className="overflow-hidden">
             <Card>
               <Card.Img variant="top" src={item.image} />
               <Card.Footer>
-                For {ethers.utils.formatEther(item.totalPrice)} ETH - Received {ethers.utils.formatEther(item.price)} ETH
+                Received {ethers.utils.formatEther(item.price)} ETH
               </Card.Footer>
             </Card>
           </Col>
@@ -75,7 +75,7 @@ export default function MyListedItems({ marketplace, nft, account }) {
       {listedItems.length > 0 ?
         <div className="px-5 py-3 container">
           <h2>
-            Listed
+            My Offers
           </h2>
           <Row xs={1} md={2} lg={4} className="g-4 py-3">
             {listedItems.map((item, idx) => (
